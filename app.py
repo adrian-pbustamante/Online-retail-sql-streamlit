@@ -4,6 +4,31 @@ import pandas as pd
 import plotly.express as px
 from db import run_sql
 
+from pathlib import Path
+import streamlit as st
+from etl import main as etl_main
+
+# paths (adjust if your layout differs)
+ROOT = Path(__file__).parent
+DB_PATH = ROOT / "data" / "online_retail.db"
+xlsx_PATH = ROOT / "data" / "Online-Retail.xlsx"  
+
+def ensure_db():
+    if not DB_PATH.exists() or DB_PATH.stat().st_size == 0:
+        st.info("Building local database — running ETL. This may take a moment...")
+        try:
+            etl_main(str(xlsx_PATH))
+            st.success("ETL complete.")
+        except FileNotFoundError as e:
+            st.error(f"ETL failed: {e}")
+            st.stop()
+        except Exception as e:
+            st.error(f"ETL error: {e}")
+            st.stop()
+
+ensure_db()
+
+
 st.set_page_config(layout='wide', page_title='Online Retail Analytics')
 st.title('Online Retail — SQL & Streamlit')
 st.markdown('Dataset: Online Retail (transactions). ETL -> SQLite -> Streamlit.')
