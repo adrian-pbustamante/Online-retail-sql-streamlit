@@ -30,7 +30,7 @@ ensure_db()
 
 
 st.set_page_config(layout='wide', page_title='Online Retail Analytics')
-st.title('Online Retail — SQL & Streamlit')
+st.title('Online Retail — SQL & Streamlit. Author: Adrian P. Bustamante. email: adrianpebus@gmail.com')
 st.markdown('Dataset: Online Retail (transactions). ETL -> SQLite -> Streamlit.')
 
 # KPIs
@@ -145,4 +145,4 @@ rfm = run_sql(rfm_q)
 st.dataframe(rfm)
 
 st.markdown('---')
-st.markdown('GitHub: https://github.com/adrian-pbustamante/Online-retail-sql-streamlit | Live app: add link')
+st.markdown('GitHub: https://github.com/adrian-pbustamante/Online-retail-sql-streamlit | Live app: https://online-retail-sql-streaml.streamlit.app/')

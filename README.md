@@ -2,6 +2,10 @@
 
 This repo contains an end-to-end demo project: ETL from the Online Retail CSV into SQLite, SQL analysis, and Streamlit dashboard skeleton workflow.
 
+### Live app:
+
+https://online-retail-sql-streaml.streamlit.app/
+
 #### Files:
 - db.py: SQLite helpers
 - etl.py: cleans CSV and populates normalized tables
