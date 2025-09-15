@@ -40,8 +40,8 @@ Country: Country name. Nominal, the name of the country where each customer resi
 
 #### Setup (Ubuntu):
 1. install requirements
+
    pip install -r requirements.txt
-2. run ETL
-   python etl.py /path/to/OnlineRetail.csv
 3. run Streamlit app
+
    streamlit run app.py
