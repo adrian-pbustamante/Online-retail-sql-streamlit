@@ -30,8 +30,8 @@ ensure_db()
 
 
 st.set_page_config(layout='wide', page_title='Online Retail Analytics')
-st.title('Online Retail — SQL & Streamlit. Author: Adrian P. Bustamante. email: adrianpebus@gmail.com')
-st.markdown('Dataset: Online Retail (transactions). ETL -> SQLite -> Streamlit.')
+st.title('Online Retail — SQL & Streamlit.')
+st.markdown('Dataset: Online Retail (transactions). ETL -> SQLite -> Streamlit. Author: Adrian P. Bustamante, email: adrianpebus@gmail.com')
 
 # KPIs
 kpi_q = '''
