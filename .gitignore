@@ -1,0 +1,5 @@
+
+venv/
+data/online_retail.db
+__pycache__/
+.ipynb_checkpoints/

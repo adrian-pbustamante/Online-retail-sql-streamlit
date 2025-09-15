@@ -1,0 +1,12 @@
+
+streamlit==1.26.0
+pandas==2.1.2
+sqlalchemy==2.1.0
+plotly==5.16.1
+python-dateutil==2.8.2
+numpy==1.26.2
+scipy==1.11.3
+matplotlib==3.8.1
+seaborn==0.12.2
+ipython
+jupyter
